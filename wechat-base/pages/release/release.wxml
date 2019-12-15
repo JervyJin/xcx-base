@@ -1,0 +1,112 @@
+<!--pages/release/release.wxml-->
+<!-- 车辆的发布 -->
+<view class='fabuche' bindtap='click'>
+  <view class='top' wx:if="{{arr.length == 0}}">
+    <image class='back' src='../../img/back.png'></image>
+    <image bindtap='iamge' class='last' src='../../img/shuangchan.png'></image>
+  </view>
+  <view class='top1' wx:if="{{arr.length > 0}}">
+    <view wx:for="{{ arr }}" wx:key='index'>
+      <image src='{{ arr[index] }}'></image>
+      <image bindtap='subir' data-index="{{ index }}" class='img2' src='../../img/close.png'></image>
+    </view>
+    <view wx:if="{{arr.length <= 5}}" wx:key='index'>
+      <image class='img1' bindtap='iamge' wx:if="{{arr.length <= 5}}" src='../../img/shangchuan.png'></image>
+    </view>
+  </view>
+  <!-- 头部的状态结束 -->
+  <view class='warp'>
+    <text class='dis'>基本信息</text>
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-radio class='floa' name="1" bind:change="onChange(1)">出租</van-radio>
+      <van-radio class='floa' name="2" bind:change="onChange(2)">求租</van-radio>
+      <!-- <van-radio class='floa' name="3" bind:change="onChange(3)">出售</van-radio>
+    <van-radio class='floa' name="4" bind:change="onChange(4)">求购</van-radio> -->
+    </van-radio-group>
+    <!-- 选择信息 -->
+    <view class='div' catchtap='kai'>
+      <text>车辆类型<text class='border'></text></text>
+      <view>
+        {{ caer == '' ? "请选择" : caer }}
+      </view>
+      <view class='xuan' wx:if="{{cars}}">
+        <view class='xuan_s'>请选择</view>
+        <view class='xuan_b'>
+          <text wx:for="{{car}}" catchtap='car1' data-car="{{item}}" class="{{caer == item  ?'cur1':'' }}"> {{ item }} </text>
+        </view>
+      </view>
+    </view>
+    <view class='div' catchtap='kai1'>
+      <text>排放标准<text class='border'></text></text>
+      <view>
+        {{ fangl == '' ? "请选择" : fangl }}
+      </view>
+      <view class='xuan' wx:if="{{fangs}}">
+        <view class='xuan_s'>请选择</view>
+        <view class='xuan_b'>
+          <text wx:for="{{fang}}" catchtap='fang1' data-pai="{{item}}" class="{{fangl== item  ?'cur':'' }}"> {{ item }} </text>
+        </view>
+      </view>
+    </view>
+    <view class='div' catchtap='jaig' hover-stop-propagation='true'>
+      <text>核载量<text class='border'></text></text>
+      <view class='dingweixuan' wx:if="{{dan}}">
+        <text catchtap='danwei' data-danei="{{ item }}" wx:for="{{danwei}}" wx:key="item">
+        {{ item }}
+      </text>
+      </view>
+      <!-- <view>
+      叉车
+    </view> -->
+      <view catchtap='checkboxChange'>
+        <input maxlength="3" type='number' class='leftfan' placeholder='请输入' value='' bindinput='fangshu'></input>
+      </view>
+      <text>{{ x == '' ? "请选择" : x}}</text>
+    </view>
+    <!-- <view class='div'>
+    <text>价格<text class='border'></text></text>
+    <input  type="number" placeholder='请输入价格' style='text-align:right'  bind:change="a"></input>
+  </view> -->
+    <view class='div1'>
+      <text>业务描述<text class='border1'></text></text>
+      <!-- wx:if="{{ textb }}" -->
+      <textarea bindblur='onRemarkInput' wx:if="{{ textb }}" maxlength="100" bindinput="miao" placeholder='请发布关于建材、工程车辆及工程机械的相关信息(内容100字以内)' class='textarea' value="{{ miaoshu }}" focus="{{ true }}"></textarea>
+      <view wx:else bindtap='xianshit' class='textarea1'> {{ tishi }} </view>
+
+      <!-- <text class='right'>{{ miaoshu.length }}/100字</text> -->
+    </view>
+    <view class='div' bindtap='xianshi'>
+      <text>地址<text class='border'></text></text>
+      <!-- <view class='doquyo'>
+        {{ address1 }}
+      </view> -->
+      <picker mode="region" bindchange="ay" value="{{region}}" custom-item="{{customItem}}">
+        <text style='background:none;color:#797979' class="picker" class="{{ show == 1 ? 'cur1' : '' }}">          {{address1}}     </text>
+      </picker>
+    </view>
+
+    <view class='div'>
+      <text>联系电话<text class='border'></text></text>
+      <input style='float:right' bind:change="dianhua" value='' type="number" placeholder='请输入联系方式'></input>
+    </view>
+    <view class='div' catchtap='timersy'>
+      <text>信息时限<text class='border'></text></text>
+      <view>
+        {{ timer == '' ? "请选择" : timer }}
+      </view>
+      <view class='xuan' wx:if="{{timers}}">
+        <view class='xuan_s'>请选择</view>
+        <view class='xuan_b'>
+          <text wx:for="{{tiemrsa}}" catchtap='tiers' data-car="{{item}}" class="{{caer == item  ?'cur1':'' }}"> {{ item }} </text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='div'>
+      <text>联系电话<text class='border'></text></text>
+      <input style='float:right' bind:change="dianhua" value='' type="number" placeholder='请输入联系方式'></input>
+    </view> -->
+    <button class='button' bindtap='fabu'>发布</button>
+  </view>
+
+  <!-- <van-area class="xuanze" bind:confirm="ay" bind:change="con" bind:cancel="quxiao" title="地区选择" wx:if="{{ show == 1 }}" area-list="{{ a }}" value="{{ value1 }}" /> -->
+</view>

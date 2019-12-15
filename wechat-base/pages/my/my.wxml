@@ -1,0 +1,113 @@
+<!--pages/my/my.wxml-->
+<view class='top'>
+  <image class='back' src='../../img/bbb.png'></image>
+  <view wx:if="{{ tishi > 0 }}" class='tongzhi' bindtap='chakan'>您有{{ tishi }}条消息未查看</view>
+</view>
+
+<view class='marign'>
+  <view>
+    <view style='font-size:30rpx'>{{ user.nickName }} </view>
+    <text class='ping'>评分 {{ average }}</text>
+    <view style='font-weight:900;font-family: "方正大黑";font-size:30rpx;margin-top:8rpx;'> {{text}} </view>
+    <image class='futop' wx:if="{{ user.avatarURL }}" src='{{user.avatarURL}}'></image>
+    <image class='futop' wx:else src='{{user.avatarUrl}}'></image>
+
+    <button id='futop1' wx:if="true" class='image' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 微信授权登录 </button>
+  </view>
+  <view class='filex'>
+    <!-- border-right:1px solid #ccc;height:60rpx -->
+    <view class='war' style='width:50%;' bindtap='myd'>
+      <view>
+        <image src='../../img/fabu.png'></image>
+        <view>我的发布</view>
+      </view>
+    </view>
+    <view class='war' style='width:50%;' bindtap='myf'>
+      <view>
+        <image src='../../img/dy.png'></image>
+        <view>我的动态</view>
+      </view>
+    </view>
+
+    <view class='war' style='width:50%;' bindtap='pj'>
+      <view>
+        <view class='dian' wx:if="{{ geshu > 0 }}"> {{geshu}} </view>
+        <image src='../../img/pingj.png'></image>
+        <view>我的评价</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 选着卡的选择 -->
+<view class='warp'>
+
+  <view class='warp_s' bindtap='platform' style='margin-top:64rpx'>
+    <view>
+      <image class='img' src='../../img/pj.png'></image>
+      <text class='fabu'>平台介绍</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <view class='warp_s' bindtap='shoujiphone'>
+    <view>
+      <image class='img' src='../../img/daphone.png'></image>
+      <text class='fabu'>更换手机号</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <view class='warp_s' bindtap='collection'>
+    <view>
+      <image class='img' src='../../img/cang.png'></image>
+      <text class='fabu'>我的收藏</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <!-- hhhhhhxxxxxxxxx-------------------------------------xxxxxxxxxxxxx -->
+  <view class='warp_s' bindtap='yaoqin' wx:if="{{ text != '未绑定手机号' }}">
+    <view>
+      <image class='img' src='../../img/pingj.png'></image>
+      <text class='fabu'>填写推广码</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <view class='warp_s' bindtap='wyyaoqin'>
+    <view>
+      <image class='img' src='../../img/fabu.png'></image>
+      <text class='fabu'>我的推广码</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <view class='warp_s1' bindtap='fakui'>
+    <view>
+      <image class='img' src='../../img/wenti.png'></image>
+      <text class='fabu' style='font-weight:600'>问题反馈</text>
+    </view>
+    <image class='jinru' src='../../img/jinru.png'></image>
+  </view>
+  <view class='warp_s1' bindtap='phone' data-phone="0371-55098080">
+    <view>
+      <image class='img' src='../../img/lianxi.png'></image>
+      <text class='fabu'>联系我们</text>
+    </view>
+    <text style='font-size:28rpx;'>0371-55098080</text>
+  </view>
+  <view class='warp_s1' bindtap='phone' data-phone="0371-55091177">
+    <view>
+      <!-- <image class='img' src='../../img/lianxi.png'></image>
+      <text class='fabu'>联系我们</text> -->
+    </view>
+    <text style='font-size:28rpx;'>0371-55091177</text>
+  </view>
+  <view class='warp_s' bindtap='phone' data-phone="0371-63222880">
+    <view>
+      <!-- <image class='img' src='../../img/lianxi.png'></image>
+      <text class='fabu'>联系我们</text> -->
+    </view>
+    <text style='font-size:28rpx;'>0371-63222880</text>
+  </view>
+
+</view>
+<image bindtap='cgaj' class="cs_image" src="../../img/kefu.png"></image>
+<button wx:if="{{ uuid != '' }}" class='button' open-type="contact">
+
+</button>

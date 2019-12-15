@@ -1,0 +1,15 @@
+<!--pages/phone/phone.wxml-->
+<view>
+  <text  class='text'>+86</text>
+  <input type='number' placeholder-style='color:rgb(207,207,207)' class='input' value='{{ phone }}' bindinput='text1' placeholder='请输入验证码'></input>
+  <text class="button"></text>
+</view>
+<view>
+  <text>验证码</text>
+  <input type='number' placeholder-style='color:rgb(207,207,207)' class='input' bindinput='text' placeholder='请输入验证码'></input>
+  <text class="button" bindtap='code' wx:if="{{ !code }}" >获取验证码</text>
+  <text class="button" wx:else> {{ code }} </text>
+</view>
+
+
+<button bindtap='bangding'>绑定</button>

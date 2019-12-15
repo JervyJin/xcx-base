@@ -1,0 +1,99 @@
+/* pages/yaoqing/yaoqing.wxss *//* pages/phone/phone.wxss */
+
+page {
+  background: #f5f8fd;
+}
+
+.phone {
+  margin-top: 30rpx;
+}
+
+view {
+  width: 100%;
+  height: 150rpx;
+  background: #fff;
+  border-bottom: 1px solid #f5f8fd;
+  font-size: 30rpx;
+}
+
+.text {
+  padding: 0 80rpx;
+}
+
+view > text {
+  display: inline-block;
+  padding: 0 60rpx;
+  float: left;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-right: 1px solid #f5f8fd;
+  margin-top: 40rpx;
+}
+
+view > input {
+  width: 400rpx;
+  float: left;
+  height: 150rpx;
+  line-height: 150rpx;
+  margin-left: 50rpx;
+}
+
+.input {
+  width: 250rpx;
+  font-size: 30rpx;
+}
+
+.button {
+  padding: 0;
+  border: 0;
+  font-size: 30rpx;
+  text-align: center;
+  width: 214rpx;
+  color: #2e82ff;
+  font-weight: 550;
+  height: 150rpx;
+  margin: 0;
+  line-height: 150rpx;
+}
+.button1 {
+  color: #f09513;
+  float: right;
+  width: 150rpx;
+}
+
+.input1 {
+  width: 188rpx;
+  font-size: 30rpx;
+  /* margin-top: 100rpx; */
+}
+.yaoqign {
+  background: none;
+  height: 170rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 170rpx;
+  font-size: 26rpx;
+  font-weight: 550;
+  color: #7b7b7b
+}
+#sizef {
+  font-size: 26rpx;
+  height: 410rpx;
+  background: none !important;  
+}
+#sizef > view {
+  background: none !important;
+  height: auto;
+  margin-bottom: 38rpx;
+  padding: 0 30rpx;
+  width: 92%;
+  font-size: 26rpx;
+  color: #7b7b7b
+}
+button {
+  width: 600rpx;
+  background: #2e82ff;
+  color: #fff;
+  /* margin-top: 200rpx; */
+  border-radius: 50rpx;
+}

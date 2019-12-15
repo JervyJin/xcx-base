@@ -1,0 +1,46 @@
+/* pages/Platform/Platform.wxss */
+.header {
+  height: 400rpx;
+  width: 100%;
+}
+.header > image {
+  height: 100%;
+  width: 100%;
+}
+.wenzi {
+  width: 690rpx;
+  height: 500rpx;
+  background: #ffffff;
+  margin: 0 auto;
+  margin-top: -234rpx;
+  z-index: 99;
+  border-radius: 16rpx;
+  box-shadow: -1px 1px 10px #e0e4f7;
+  position: relative
+}
+.toux {
+  height: 120rpx;
+  width: 120rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius:20rpx;
+  position: absolute;
+  top: -65rpx; 
+  left: 42%;
+  border: 8rpx solid #fff;
+  box-shadow: 1px 1px 10px #e0e4f7;
+}
+.toux > image {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.size {
+  margin-top: 110rpx;
+  float: left;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  color:#787878; 
+  line-height: 48rpx;
+  text-indent: 60rpx
+}

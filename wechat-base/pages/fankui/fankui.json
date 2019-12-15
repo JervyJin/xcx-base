@@ -1,0 +1,11 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "问题与反馈",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

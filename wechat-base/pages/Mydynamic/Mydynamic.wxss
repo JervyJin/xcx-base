@@ -1,0 +1,239 @@
+/* pages/Mydynamic/Mydynamic.wxss */
+
+.warp {
+  margin-bottom:80rpx 
+}
+.nr {
+  padding-top: 40rpx;
+  width: 92%;
+  min-height: 354rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  padding: 20rpx 30rpx 0 30rpx;
+  overflow: hidden;
+  position: relative
+}
+.first {
+  width: 90rpx;
+  height: 100%;
+  float: left;
+}
+
+.first > image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 14rpx;
+}
+
+.right {
+  width: 570rpx;
+  height: 100%;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.right > .user {
+  font-size: 32rpx;
+  font-weight: 550;
+}
+
+.right > .flux {
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  width: 100%;
+  float: left;
+}
+
+.right > .flux > text {
+  float: left;
+  padding: 0 20rpx;
+  border-right: 1px solid #b0b9c8;
+  font-weight: 800;
+  font-size: 28rpx;
+  max-width: 124rpx;
+  height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right > .flux  :first-child {
+  padding-left: 0;
+}
+
+.right > .flux :last-child {
+  border: 0;
+}
+
+.diqu {
+  margin-top: 20rpx;
+  float: left;
+  width: 100%;
+}
+
+.diqu > text {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 20rpx
+}
+
+.diqu :first-child {
+  width: 284rpx;
+  height: 42rpx;
+  border-radius: 10rpx;
+  border: 1px solid #2e82ff;
+  line-height: 42rpx;
+  text-align: center;
+  color: #2e82ff;
+  font-weight: 600;
+}
+
+.diqu > .last {
+  margin-left: 30rpx;
+  width: 116rpx;
+  height: 42rpx;
+  border-radius: 10rpx;
+  border: 1px solid #fd304e;
+  line-height: 42rpx;
+  text-align: center;
+  color: #fd304e;
+  font-weight: 600;
+}
+
+.sheng {
+  width: 100%;
+  float: left;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  line-height: 35rpx;
+  height: 66rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #797979;
+   word-wrap: break-word;
+}
+
+.zhanshi {
+  float: left;
+  width: 100%;
+  height: 90rpx;
+  margin-top: 20rpx;
+  /* background: red; */
+  margin-bottom: 30rpx;
+  position: relative
+}
+
+.zhanshi > view {
+  float: left;
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 6rpx;
+  /* background: #b0b9c8; */
+}
+
+.xqimg > image {
+  height: 100%;
+  width: 100%;
+}
+
+.zhanshi :last-child {
+  margin-right: 0;
+}
+
+.warp {
+  background: #f5f8fd;
+}
+
+.xuanze {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.warp_img {
+  position: absolute;
+  height: 100%;
+  width: 60rpx;
+  /* background: red; */
+  right: 10rpx;
+  top: 0;
+}
+
+.warp_img > image {
+  width: 70%;
+  height: 44%;
+  margin-top: 40%;
+}
+
+.shanchu {
+  height: 100rpx;
+  width: 100%;
+  background: #2e82ff;
+  position: fixed;
+  bottom: 0;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+  z-index: 99999
+}
+.shanchu  > text {
+  /* letter-spacing:30rpx; */
+  color: #fff;
+  font-size: 36rpx
+}
+.in {
+  float: right;
+  margin-top: 10rpx
+}
+.none {
+  width: 100%;
+  text-align: center
+}
+.none > image {
+  height: 316rpx;
+  margin-top: 200rpx
+}
+.none > text {
+  display: block;
+  color: #797979;
+  font-size: 24rpx;
+  margin-top: 50rpx
+}
+.shixoa {
+  position: absolute;
+  height: 68%;
+  width: 400rpx;
+  top: 16%;
+  left: 16%;
+  z-index: 999
+}
+#chong {
+  width: 142rpx;
+  height: 60rpx;
+  background: none;
+  font-size: 30rpx;
+  border:1px solid #ff9e13;
+  background: #ff9e13;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+/* .van-checkbox__icon {
+  height: 60rpx !important;
+  width: 60rpx !important;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 40rpx !important
+} */
+.van-checkbox__icon--round {
+  background: #f2f5fd
+}

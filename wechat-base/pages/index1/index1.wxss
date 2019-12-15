@@ -1,0 +1,33 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 20rpx;
+  font-weight: 600
+}
+.image {
+  margin-top: 200rpx;
+  background: #2f82ff;
+  color: #fff
+}
+.van-checkbox__icon--checked {
+  background: #f2f5fd
+}
+.flex {
+  display: flex;
+}

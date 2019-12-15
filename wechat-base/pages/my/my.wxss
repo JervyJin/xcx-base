@@ -1,0 +1,176 @@
+/* pages/my/my.wxss */
+.top {
+  height: 340rpx;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  /* margin-top: 20rpx; */
+}
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+}
+.top > .tu {
+  height: 120rpx;
+  width: 120rpx;
+  margin-top: 90rpx;
+  margin-left: 42%;
+  border-radius: 10rpx;
+  float: left;
+  overflow: hidden
+}
+.tu > image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.top > .wenzi {
+  text-align: center;
+  float: left;
+  width: 100%;
+  margin-top: 50rpx;
+}
+.wenzi > text {
+  font-size: 36rpx;
+  font-weight: 550;
+  color: #fff
+}
+.warp {
+  padding: 0rpx 30rpx;
+}
+.warp > .warp_s {
+  /* padding: 32rpx 0; */
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eff1f8
+}
+.warp > .warp_s1 {
+    height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eff1f8
+}
+.img {
+  height: 50rpx;
+  width: 50rpx;
+  margin-right: 30rpx;
+  margin-top: 32rpx;
+  float: left;
+}
+.fabu {
+  font-size: 30rpx;
+  margin: 0;
+  padding: 0;
+  display: inline-blockl;
+  float: left;
+}
+.jinru {
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 44rpx;
+}
+.marign {
+  height: 300rpx;
+  width: 630rpx;
+  background: #FFF;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  margin-top: -200rpx;
+  padding: 30rpx;
+  position: relative;
+  box-shadow: 2rpx 2rpx 20rpx #e0e4f7;
+}
+.futop {
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  right: 30rpx;
+  top: -30rpx;
+}
+.filex {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 34rpx;
+ 
+}
+.war{
+  width: 120rpx;
+  font-size: 30rpx;
+  text-align: center
+}
+.war>view {
+  position: relative
+}
+.war>view > .dian {
+  height: 30rpx;
+  width: 30rpx;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+  left: 60rpx;
+  top: -15rpx;
+  font-size: 20rpx;
+  color: #fff
+}
+.war> view > image {
+  width: 80rpx;
+  height: 70rpx;
+}
+.war> view > view {
+  margin-top: 20rpx
+}
+.ping {
+  display: inline-block;
+  width: 120rpx;
+  background: #ffc13e;
+  font-size: 24rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  color: #fff;
+}
+#futop1 {
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  right: 30rpx;
+  top: -30rpx;
+  background: red;
+  opacity: 0
+  /* display: block */
+}
+.button {
+  position: fixed;
+  bottom: -3rpx;
+  left: 30rpx;
+  height: 170rpx;
+  width: 170rpx;
+  opacity: 0
+}
+.cs_image {
+  height: 130rpx;
+  width: 100rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom: 30rpx;
+  left: 30rpx;
+}
+.tongzhi {
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  padding-top: 20rpx;
+  width: 350rpx;
+  background: #f2f5fd;
+  height: 60rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #000
+}

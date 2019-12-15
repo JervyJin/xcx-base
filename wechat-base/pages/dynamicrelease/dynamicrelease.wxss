@@ -1,0 +1,152 @@
+/* pages/dynamicrelease/dynamicrelease.wxss */
+.top {
+  height: 464rpx;
+  width: 100%;
+  /* background: red; */
+  position: relative;
+  text-align: center
+}
+.top > .back {
+  height: 100%;
+  width: 100%;
+}
+.top > .last {
+  position: absolute;
+  height: 160rpx;
+  width: 160rpx;
+  z-index: 99;
+  top: 72rpx;
+  left: 298rpx
+} 
+.top1 {
+  height: 464rpx;
+  width: 94%;
+  background: #ffffff;
+  position: relative;
+  padding: 0rpx 20rpx 0 20rpx
+}
+.top1 > view {
+  height: 214rpx;
+  width: 214rpx;
+  margin: 10rpx;
+  float: left;
+  position: relative
+}
+.top1 > view > image {
+  width: 100%;
+  height: 100%
+}
+.top1 > view .img2 {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+.warp {
+  padding: 0 30rpx;
+  height: 100%;
+  background: #fff;
+  float: left;
+  width: 92%;
+}
+.warp > .dis {
+  display: block;
+  font-size: 38rpx;
+  padding-top: 35rpx;
+  padding-bottom: 58rpx ;
+  font-weight: 600
+}
+.floa {
+  float: left;
+  margin: 15rpx;
+  font-size: 28rpx;
+}
+.div {
+  width: 656rpx;
+  float: left;
+  background: pink;
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  border-radius: 6rpx;
+  padding: 0 18rpx;
+  border: 1px solid #dedddd;
+  color: #797979;
+  background: #f9fbfd;
+  margin-top: 22rpx;
+  position: relative
+}
+.border {
+  height: 24rpx;
+  width: 2rpx;
+  background: #dedddd;
+  display: inline-block;
+  position: absolute;
+  top: 30rpx;
+  left: 150rpx
+}
+.button {
+  width: 500rpx;
+  height: 80rpx;
+  margin: 100rpx;
+  line-height: 80rpx;
+  color: #ffffff;
+  background: #2f82ff;
+  border-radius: 38rpx;
+  float: left;
+  margin-left: 15%
+}
+.div > input {
+  height: 80rpx;
+  float: right;
+  width: 300rpx
+}
+.div1 {
+  width: 656rpx;
+  float: left;
+  background: pink;
+  height:300rpx;
+  font-size: 30rpx;
+  line-height: 120rpx;
+  border-radius: 6rpx;
+  padding: 0 18rpx;
+  border: 1px solid #dedddd;
+  color: #797979;
+  background: #f9fbfd;
+  margin-top: 22rpx;
+  position: relative
+}
+.right {
+  position: absolute;
+  /* background: red; */
+  right: 0;
+  bottom: 0;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.textarea {
+  width: 100%;
+  height: 130rpx;
+  line-height: 14rpx;
+  padding: 6rpx;
+  margin-top: -24rpx
+}
+.falt {
+  width: 100%;
+}
+.floa {
+  margin:60rpx 40rpx
+}
+.zhuyi {
+  font-size: 24rpx;
+  text-align: center;
+  color: #797979;
+  display: block;
+  width: 70%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 30rpx
+}

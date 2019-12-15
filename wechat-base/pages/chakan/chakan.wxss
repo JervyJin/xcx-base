@@ -1,0 +1,31 @@
+/* pages/chakan/chakan.wxss */
+.view {
+  height: 100rpx;
+  width: 92%;
+  background: #fff;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #f7f7f7;
+  position: relative
+}
+.dian {
+  height: 10rpx;
+  width: 10rpx;
+  background: red;
+  position: absolute;
+  right: 20rpx;
+  top: 30rpx;
+  border-radius: 50%
+}
+.dian1 {
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+   position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #f7f7f7
+}

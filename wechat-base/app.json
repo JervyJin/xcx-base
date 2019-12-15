@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index1/index1",
+    "pages/my/my",
+    "pages/xiaoxi/xiaoxi",
+    "pages/huodong/huodong",
+    "pages/chakan/chakan",
+    "pages/xieyi/xieyi",
+    "pages/juok/juok",
+    "pages/index/index",
+    "pages/xq/xq",
+    "pages/fankui/fankui",
+    "pages/xiugai/xiugai",
+    "pages/dynamicrelease/dynamicrelease",
+    "pages/release/release",
+    "pages/Platform/Platform",
+    "pages/Mydynamicz/Mydynamicz",
+    "pages/Mydynamic/Mydynamic",
+    "pages/logs/logs",
+    "pages/phone/phone",
+    "pages/gaiphone/gaiphone",
+    "pages/jubao/jubao",
+    "pages/collection/collection",
+    "pages/mypj/mypj",
+    "pages/yaoqing/yaoqing",
+    "pages/myyaoqing/myyaoqing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#aab2bf",
+    "selectedColor": "#2f83fd",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "img/shouye_s.png",
+        "selectedIconPath": "img/shouye.png"
+      },
+      {
+        "text": "即时信息",
+        "pagePath": "pages/logs/logs",
+        "iconPath": "img/xiaoxi_s.png",
+        "selectedIconPath": "img/xiaoxi.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "img/wode_s.png",
+        "selectedIconPath": "img/wode.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

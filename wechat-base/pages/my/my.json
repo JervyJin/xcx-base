@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#2f82ff",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

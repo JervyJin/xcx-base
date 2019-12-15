@@ -1,0 +1,491 @@
+/* pages/xq/xq.wxss */
+/* .u-wrp-bnr {
+  height: 450rpx;
+  width: 100%;
+  display: block
+}
+.u-img-slide {
+  width: 100%;
+  height: 100%;
+} */
+#j_page {
+  float: left;
+  height: 100%;
+  width: 100%
+}
+.u-wrp-bnr {
+  width: 100%;
+  height: 450rpx;
+  position: relative;
+  background: #f0f0f0;
+}
+.zhe {
+  width: 100%;
+  height: 450rpx;
+  display: block;
+  position: absolute;
+  background: red;
+  top: 0;
+  opacity: 0;
+  /* overflow: hidden */
+}
+.u-img-slide {
+  width: 100%;
+  height: inherit
+}
+.warp {
+  width: 100%;
+  background: #f5f8fd;
+  height: 100%;
+  float: left;
+  /* margin-bottom: 90rpx */
+}
+.first {
+  height: 120rpx;
+  background: #fff;
+  line-height: 124rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20rpx 0 0 30rpx;
+  position: relative;
+}
+.first > view > image {
+  height: 90rpx;
+  width: 90rpx;
+  float: left;
+  border-radius: 10rpx
+}
+.first > view > text {
+  float: left;
+  margin-left: 26rpx;
+  height: 26rpx;
+  line-height: 1;
+  margin-top: 28rpx;
+  font-size: 30rpx;
+}
+.img {
+  width: 140rpx;
+  height: 50rpx;
+  margin-top: 24rpx;
+}
+.fist1 {
+  height: 180rpx;
+  width: 92%;
+  margin-top: 10rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between
+}
+.fist1 > view {
+  float: left;
+  /* width: 49.5%; */
+  font-size: 30rpx;
+  /* color: #7a7a7a; */
+}
+.a {
+  color: #000 !important
+}
+.fist1 > view > text {
+  display: block;
+  margin-top:34rpx ;
+  margin-bottom: 28rpx;
+  font-size: 30rpx;
+}
+.a {
+  font-weight: 600
+}
+.miaoshu {
+  min-height: 190rpx;
+  width: 92%;
+  margin-top: 10rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  padding-top:20rpx; 
+  color: #7a7a7a;
+  font-size: 24rpx;
+}
+.miaoshu > .zi {
+  line-height: 46rpx;
+  color: #000;
+  font-size: 30rpx;
+  word-wrap: break-word;
+}
+.bottom {
+  margin-top: 10rpx;
+  height: 130rpx;
+  width: 92%;
+  padding: 0 30rpx;
+  padding-top: 20rpx;
+  background: #fff;
+  font-size: 30rpx;
+  color: #7a7a7a;
+  /* padding-bottom: 100rpx; */
+  background: #fff;
+  margin-bottom: 20rpx
+}
+.leet {
+  letter-spacing: 14rpx;
+}
+.leet > .dizhi {
+  letter-spacing: 20rpx;
+  font-weight: 400;
+  color: #797979
+}
+.leet > text {
+  letter-spacing: 0rpx;
+  color: #000;
+  font-weight: 600
+}
+.colro {
+  color: #000;
+  font-weight: 600
+}
+.bottom1 {
+  position: fixed;
+  height: 100rpx;
+  width: 100%;
+  background: red;
+  bottom: 0;
+}
+.bottom1 > view {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  color: #fff;
+  position: relative
+}
+.xian {
+  height: 40rpx;
+  width: 40rpx;
+  top: 30rpx;
+  position: absolute;
+  left: 75rpx;
+}
+.button {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  width: 100rpx;
+  opacity: 0
+}
+.warp_tan {
+  height: 470rpx;
+  width: 92%;
+  background: #ffffff;
+  padding: 0 30rpx
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx
+}
+.textear {
+  width: 540rpx;
+  margin: 0 auto;
+  height: 140rpx;
+  background: #fafbff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  border: 4rpx solid #dcdcdc;
+  font-size: 26rpx;
+}
+.textphone {
+  width: 568rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  margin-top: 18rpx;
+  border-radius: 10rpx;
+  background: #fafbff;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  padding: 0 16rpx;
+  border: 4rpx solid #dcdcdc
+}
+.textphone > text {
+  font-size: 26rpx;
+}
+.textphone > input {
+  text-align: right;
+  height: 80rpx;
+  font-size: 26rpx
+}
+.tishitext {
+  font-size: 20rpx;
+  text-align: center;
+  margin-top: 26rpx;
+  color: #b7b9c6;
+}
+.shaires {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  height: 100rpx;
+  width: 100rpx
+}
+.shaires1 {
+  position: absolute;
+  right: 150rpx;
+  top: 30rpx;
+  height: 100rpx;
+  width: 100rpx
+}
+.first > .flexllc {
+  position: absolute;
+  right: 30rpx;
+  top: 28rpx
+}
+.first > .flexllc > image{
+  height: 80rpx;
+  width: 80rpx;
+}
+.first > .flexllc > text {
+  color: #797979;
+  margin-left: 6rpx
+}
+.pingjia {
+  position: fixed;
+  height: 120rpx;
+  width: 120rpx;
+  right: 30rpx;
+  bottom: 280rpx
+}
+.height {
+  height: 1000rpx;
+  position: relative;
+}
+.shuop {
+  height: 90rpx;
+  width: 92%;
+  text-align: center;
+  line-height: 90rpx;
+  padding: 0 30rpx
+}
+.thoux {
+  width: 100%;
+  text-align: center
+}
+.thoux > image {
+  height: 90rpx;
+  width: 90rpx;
+  margin-top: 42rpx;
+  border-radius: 10rpx
+}
+.name {
+  margin-top: 10rpx;
+  color: #1c4da9;
+  font-size: 30rpx;
+}
+.texty {
+  width: 500rpx;
+  margin: 0 auto;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-top: 120rpx
+}
+.view {
+  width: 92%;
+  height: 80%;
+  text-align: left;
+  background: #f5f8fd;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  font-size: 24rpx;
+}
+.texty> textarea {
+  width: 92%;
+  height: 80%;
+  text-align: left;
+  background: #f5f8fd;
+  border-radius: 10rpx;
+  padding: 18rpx;
+  font-size: 24rpx;
+}
+
+.tijiao{
+  height: 88rpx;
+  width: 60%;
+  background: #2e82ff;
+  margin: 0 auto;
+  line-height: 88rpx;
+  color: #fff;
+  margin-top: 80rpx;
+  border-radius: 50rpx
+}
+.pingjiaa {
+  float: left;
+  width: 100%;
+  padding-bottom: 200rpx;
+}
+.pingjia1 {
+  float: left;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  height: 64rpx;
+  width: 92%;
+  line-height: 64rpx;
+}
+.pinglnr {
+  min-height: 130rpx;
+  float: left;
+  /* background: red; */
+  width: 92%;
+  padding: 0 30rpx;
+  margin-bottom: 60rpx;
+   /* border-bottom: 2px solid #f5f8fd */
+}
+.firstyy {
+  width: 100%;
+  height: 100%;
+  /* background: yellowgreen; */
+  float: left
+}
+.firstyy> image {
+  height: 60rpx;
+  width: 60rpx;
+  float: left;
+  border-radius: 10rpx;
+  margin-top: 6rpx;
+}
+.firstyy .righ {
+  float: right;
+  font-size: 24rpx;
+}
+.clickname {
+  float: left;
+  margin-left: 20rpx
+}
+.clickname > text {
+  display: block
+}
+.clickname :first-child {
+  font-size: 24rpx;
+}
+.clickname .last {
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 32rpx;
+  border: 1px solid #ff9f15;
+  color: #ff9f15;
+  text-align: center;
+  line-height: 32rpx;
+  border-radius: 20rpx
+}
+.pnryy {
+  /* margin-top: 20rpx; */
+  margin-left: 74rpx;
+  width: 530rpx;
+  min-height: 30rpx;
+  font-size: 24rpx;
+  /* background: pink; */
+  color: #797979;
+  float: left;
+  /* margin-bottom: 30px */
+}
+.pnryyh {
+  margin-left: 74rpx;
+  /* width: 504rpx; */
+  min-height: 110rpx;
+  /* background: #f5f8fd; */
+  border-radius: 16rpx;
+  margin-top: 22rpx;
+  padding: 18rpx;
+  float: left;
+  position: relative;
+}
+.pnryyh > view >  image {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 6rpx;
+  float: left;
+  /* margin-top: 18rpx; */
+}
+.pnryyh > view > text {
+  height: 40rpx;
+  /* border-radius: 6rpx; */
+  float: left;
+  /* line-height: 40rpx; */
+  margin-top: 6rpx;
+  /* font-weight: 600; */
+  color: #9d9ea0
+}
+.hiuf {
+  margin-top: 20rpx;
+  float: left;
+  width: 100%;
+  text-align: left;
+  font-size: 24rpx;
+  color: #7a7977;
+  margin-left:58rpx
+}
+.showtext {
+  padding: 20rpx 30rpx;
+  width: 92%;
+  position: fixed;
+  bottom: 100rpx;
+  background: #fcfcfc;
+  display: flex;
+  /* justify-content: space-around; */
+  z-index: 9
+}
+.showtext > input {
+  background: yellowgreen;
+  height: 70rpx;
+  font-size: 34rpx;
+  width: 440rpx;
+  border-radius: 8rpx;
+  border: 1px solid #ececec;
+  background: #ffffff
+}
+.showtext> text {
+  background: pink;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 146rpx;
+  background: #2e82ff;
+  text-align: center;
+  color: #fff;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+}
+.twohui {
+  margin-left: 74rpx;
+  float: left;
+  margin-top: 22rpx;
+  /* width: 504rpx; */
+  min-height: 80rpx;
+  padding: 18rpx
+}
+.twohui > view > image {
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 6rpx;
+  float: left
+}
+.twohui > view >.yonghu {
+  font-size: 24rpx;
+  /* font-weight: 600; */
+  float: left;
+  margin-top: 6rpx;
+  margin-left: 10rpx;
+}
+.huifuneirong {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  float: left;
+  width: 100%;
+  color: #797979;
+  margin-left: 55rpx
+}
+.righ {
+  font-size: 24rpx;
+  float: right;
+  /* position: absolute; */
+  /* right: 0 */
+}

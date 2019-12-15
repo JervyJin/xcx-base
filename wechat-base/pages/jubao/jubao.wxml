@@ -1,0 +1,57 @@
+<!--pages/jubao/jubao.wxml-->
+<view class='first'>
+  <text></text>
+  <text style='font-size:30rpx'>请您选择举报原因</text> </view>
+<van-radio-group value="{{ radio }}" bind:change="onChange">
+  <van-cell-group>
+    <van-cell title="疑似诈骗" value-class="value-class"  data-name="1" bind:click="onClick">
+      <van-radio name="1" />
+    </van-cell>
+    <van-cell title="车辆信息虚假" value-class="value-class" clickable data-name="2" bind:click="onClick">
+      <van-radio name="2" />
+    </van-cell>
+    <van-cell title="即时信息虚假" value-class="value-class" clickable data-name="3" bind:click="onClick">
+      <van-radio name="3" />
+    </van-cell>
+    <van-cell title="电话无人接听" value-class="value-class" clickable data-name="4" bind:click="onClick">
+      <van-radio name="4" />
+    </van-cell>
+    <van-cell title="车辆图片虚假" value-class="value-class" clickable data-name="5" bind:click="onClick">
+      <van-radio name="5" />
+    </van-cell>
+    <van-cell title="其他" value-class="value-class" clickable data-name="6" bind:click="onClick">
+      <van-radio name="6" />
+    </van-cell>
+  </van-cell-group>
+</van-radio-group>
+<view class='first' style='margin-top:10rpx;'>
+  <text></text>
+  <text style='font-size:30rpx'>补充说明</text> </view>
+<textarea bindinput='change' maxlength='50' placeholder-style='color:#c6c6c6' placeholder='请您尽可能描述整个事件的详细过程并提供通话记录、聊天等相关证明资料'></textarea>
+<view class='first' style='margin-top:10rpx;'>
+  <text></text>
+  <text style='font-size:30rpx'>上传图片</text> </view>
+<view class='top1'>
+  <view wx:for="{{ arr }}" wx:key='index'>
+    <image src='{{ arr[index] }}'></image>
+    <image bindtap='subir' data-index="{{ index }}" class='img2' src='../../img/close.png'></image>
+  </view>
+  <view wx:if="{{arr.length <= 2}}" wx:key='index'>
+    <image class='img1' bindtap='iamge' wx:if="{{arr.length <= 2}}" src='../../img/shangchuan.png'></image>
+  </view>
+
+</view>
+
+<!-- <view class='top1'>
+  <view wx:for="{{ arr }}" wx:key='index'>
+    <image src='{{ arr[index] }}'></image>
+    <image bindtap='subir' data-index="{{ index }}" class='img2' src='../../img/close.png'></image>
+  </view>
+  <view wx:if="{{arr.length <= 2}}" wx:key='index'>
+    <image class='img1' bindtap='iamge' wx:if="{{arr.length <= 2}}" src='../../img/shangchuan.png'></image>
+
+  </view>
+</view> -->
+<view style='widht:100%;background:#fff;height:180rpx;padding:45rpx'>
+  <button bindtap='tijiao'>提交</button>
+</view>

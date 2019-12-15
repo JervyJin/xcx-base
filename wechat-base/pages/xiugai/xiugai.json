@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "车辆修改",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#2f82ff",
+  "navigationBarTextStyle": "white",
+
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-radio": "../../dist/radio/index",
+    "van-radio-group": "../../dist/radio-group/index"
+  }
+}

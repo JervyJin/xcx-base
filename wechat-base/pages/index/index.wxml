@@ -1,0 +1,237 @@
+<!-- 遮罩层 -->
+<image wx:if="{{ xianshitiank }}"  class='xianshiimg' src='../../img/xianshi.png'></image>
+<view class='mask' wx:if="{{ hidden }}"></view>
+<image bindtap='top0' class='fanhuitop' src='../../img/fantop.png'></image>
+<!-- <image class='yindao' src='../../img/yindao.png'></image> -->
+<view class='posi'>
+  <image class='post' src='../../img/sou.png'></image>
+  <input confirm-type='search' bindconfirm="sendMsgTap" class='ipt' bindinput='carSearch' placeholder='请输入关键字及车辆信息'></input>
+  <view class='warp_img' bindtap='tap'>
+    <text style='color:#fff'> 搜索 </text>
+    <!-- <image src='../../img/sou.png'></image> -->
+  </view>
+</view>
+<!-- 卡片轮播 -->
+
+<!-- 头部的轮播图 -->
+<view class='lunboy'>
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='10000' duration='1000' circular='true'>
+    <block wx:for="{{ lunbo }}" wx:for-index="index" wx:key="">
+      <swiper-item>
+        <image bindtap='xiaoshi' src='{{ item }}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 卡片 轮播 -->
+  <!-- <swiper style='background:#fff' bindchange="cardSwiper" circular="true" autoplay="true" interval="5000" duration="500" indicator-color="#8799a3" indicator-active-color="#0081ff" class="cardSwiper">
+    <block wx:for="{{swiperList}}" wx:key="*this">
+      <swiper-item class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-view">
+          <image src="{{item.url}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper> -->
+  <!-- 即时信息的推送 -->
+  <view class='jishutui'>
+    <image class='left' src='../../img/jishi.png'></image>
+    <swiper vertical="true" class='x-wrp-bnr' autoplay='true' interval='3000' duration='1000' circular='true'>
+      <!-- 有消息 -->
+      <block wx:if="{{ !nice[0] }}" wx:for="{{ nice }}" wx:for-index="index" wx:key="">
+        <swiper-item style="left:0">
+          <!--  -->
+          <view data-uuid="{{ item.id }}" bindtap='toated' class='xiaoxio' wx:for="{{ item }}">
+            <text></text>
+            <text class='shenglv'> {{ item.describe }} </text>
+          </view>
+          <view data-uuid="{{ item.id }}" bindtap='toated' class='xiaoxio'>
+            <text></text>
+            <text class='shenglv' wx:for="{{ item }}">
+            {{ item.describe }}</text>
+          </view>
+        </swiper-item>
+      </block>
+      <!-- 无消息 -->
+      <block wx:if="{{ nice[0] }}" wx:for-index="index" wx:key="">
+        <swiper-item style="left:0">
+          <!-- <image src='{{ item }}' class='x-img-slide' mode='aspectFill'></image> -->
+          <view class='xiaoxio'>
+            <text></text>
+            <text class='shenglv'> 暂无消息 </text>
+          </view>
+          <view class='xiaoxio'>
+            <text></text>
+            <text class='shenglv'> 暂无消息 </text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- -------------------即时消息的结束 -->
+
+  <!-- vertical="true"  是轮播图的竖向滚动 -->
+</view>
+<!-- 搜索框 -->
+<view class='about'>
+  <!-- 搜索框 -->
+  <!-- 地区类型的选择 -->
+  <view class='qu'>
+    <!-- 地区选择 -->
+    <!--  class="{{ show == 1 ? 'cur1' : '' }}" -->
+    <picker mode="region" bindchange="ay" value="{{region}}" custom-item="{{customItem}}">
+      <view style='border-right:1px solid #ccc' class="picker"> {{ xianshi }}
+        <image src='../../img/zhuan2.png'></image>
+      </view>
+    </picker>
+    <!-- 车辆 <text bindtap='cheliang' class="{{ car == 1 ? 'cur1' : '' }}"> {{ xianshic }} </text> -->
+
+    <!-- <input value='{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}'></input> -->
+    <picker mode="multiSelector" class='asdas' bindchange="onConfirm2" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <!-- class="{{ car == 1 ? 'cur1' : '' }}" -->
+      <view style='border-right:1px solid #ccc' class="picker"> {{ xianshic }}
+        <image src='../../img/zhuan2.png'></image>
+      </view>
+    </picker>
+    <!-- 交易方式 -->
+    <!--  class="{{ jiaoyi == 1 ? 'cur1' : '' }}" -->
+    <picker bindchange="onConfirm1" value="{{index}}" range="{{array}}">
+      <view style='border-right:1px solid #ccc' class='picker' bindtap='jiaoyi1'> {{ xianshif }}
+        <image src='../../img/zhuan2.png'></image>
+      </view>
+    </picker>
+    <picker mode="multiSelector" class='asdas' bindchange="onConfirm" bindcolumnchange="bindMultiPickerColumnChange1" value="{{multiIndex1}}" range="{{multiArray1}}">
+      <!-- class="{{ hezaia == 1 ? 'cur1' : '' }}" -->
+      <view class="picker"> {{ xianshih }}
+        <image src='../../img/zhuan2.png'></image>
+      </view>
+    </picker>
+    <!-- 排放标准 -->
+    <!--  <text class='picker' bindtap='zhun' class="{{ pai == 1 ? 'cur' : '' }}"> {{ plast }} -->
+  </view>
+</view>
+<!-- 发布内容的显示 -->
+<view class='warp'>
+  <view class='nr' wx:if="{{ all.length <= 0 }}" wx:for="{{1}}" wx:key="index">
+  </view>
+  <view class='nr' wx:for="{{all}}" wx:key="index" bindtap='xq' data-uuid="{{ item.uuid }}" data-id="{{ item.id }}">
+    <!-- 用户头像的显示 -->
+    <view class='first'>
+      <image wx:if="{{ item.avatarURL }}" src='{{ item.avatarURL }}'></image>
+      <image wx:else src='../../img/headert.png'></image>
+    </view>
+    <!-- 发布内容信息 -->
+    <view class='right'>
+      <view class='user' style='color:#1c4da8'> {{ item.nickName }} </view>
+      <view class='pingfen'>评分 {{ item.average }}</view>
+      <view class='flux'>
+        <!-- <text wx:if="{{ item.tradesytle == 1 }}"> 出租 </text>
+        <text wx:else> 求租 </text> -->
+        <text> {{ item.tradeType }} </text>
+        <text> {{ item.carName }} </text>
+        <text> {{ item.capacity }}</text>
+        <!-- <text wx:if="{{item.standard}}"> {{ item.standard }}</text> -->
+      </view>
+      <!-- 地区的选择 -->
+      <view class='diqu'>
+        <text> {{ item.address }} </text>
+        <!-- <text class='last'>4800元</text> -->
+      </view>
+      <!-- 内容的简述 -->
+      <view class='sheng'>
+        {{ item.describe }}
+      </view>
+      <!-- 图片的展示 -->
+      <view class='zhanshi'>
+        <!-- <view wx:for="{{ item.url }}" class='xqimg'>
+          <image src='{{ item.p_url }}'></image>
+        </view> -->
+        <!-- 测试  wx:if="{{ item.list.length < 4 }}" -->
+        <view wx:for="{{ item.list }}" wx:key="item" class='xqimg'>
+          <image src='{{ item }}'></image>
+        </view>
+      </view>
+      <view class='look'>
+        <text>{{ item.updatetime }}</text>
+        <text style='text-align:center'>浏览 {{ item.clicks }} </text>
+        <view style='text-align:right'>
+          <view id='imgas'>
+          <!-- 未读消息的显示 -->
+            <!-- <view class='posintion' wx:if="{{  item.commentNumber > 0 }}"></view> -->
+            <image id='imgas' src='../../img/xx.png'></image>
+          </view> {{ item.commentNumber }} </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom' style="bottom:{{ballBottom}}px;right:{{ballRight}}px;" catchtouchmove="ballMoveEvent" catchtouchend="over">
+  <image bindtap='fabu' src='../../img/fa.png'></image>
+</view>
+<!-- 选择发布的类型 -->
+<van-popup custom-style="background:none" show="{{ fabugai }}" bind:close="onClose">
+  <view class='close_warp'>
+    <view class='close' bindtap='fabu1'>
+      <image src='../../img/fabucar.png'></image>
+      <text>车辆发布</text>
+    </view>
+    <view class='close' bindtap='dyfabu'>
+      <image src='../../img/fabuxx.png'></image>
+      <text>即时发布</text>
+    </view>
+  </view>
+</van-popup>
+<!-- ------------首页的引导------------ -->
+<!-- first -->
+<van-popup custom-style="background:none;height:100%;position: absolute;z-index:999; text-align: center" show="{{ yin1 }}" position="top" overlay="{{ true }}" bind:close="onClose">
+  <image class='yindaofirst' src='../../img/frist1.png'></image>
+  <image bindtap='zhidao1' class='zhidao' src='../../img/zhidao.png'></image>
+  <image bindtap='tiaoguo' class='tiaoguo' src='../../img/tiaoguo.png'></image>
+</van-popup>
+
+<!-- two -->
+<van-popup custom-style="background:none;height:100%; text-align: center" show="{{ yin2 }}" position="top" overlay="{{ true }}" bind:close="onClose">
+  <image class='yindaotwo' src='../../img/two2.png'></image>
+  <image bindtap='zhidao2' class='zhidao' src='../../img/zhidao.png'></image>
+  <image bindtap='tiaoguo' class='tiaoguo' src='../../img/tiaoguo.png'></image>
+</van-popup>
+
+<!-- last -->
+<van-popup custom-style="background:none;height:100%; text-align: center" show="{{ yin3 }}" position="bottom" overlay="{{ true }}" bind:close="onClose">
+  <image class='last3' src='../../img/three3.png'></image>
+  <image bindtap='zhidao3' class='zhidao3' src='../../img/zhidao.png'></image>
+</van-popup>
+
+<!-- 即时信息的详情 -->
+<van-popup show="{{ once }}" custom-style="width:90%;min-height:406rpx;border-radius:30rpx;background:none;  overflow: auto" bind:close="onClose">
+
+  <view class='showjishi'>
+    <image class='posit' bindtap='onClose' src='../../img/toaclose.png'></image>
+    <view class='ft'>
+      <!-- 头像 -->
+      <image wx:if="{{ mess.avatarURL }}" src='{{ mess.avatarURL }}'></image>
+      <image wx:else src='../../img/headert.png'></image>
+      <text> {{ mess.nickName }} </text>
+      <view class='right'>
+        评分 {{ mess.average }}
+        <!-- <van-rate allow-half custom-class="rate" readonly size="{{14}}" value="{{ mess.average }}" bind:change="onChange" /> -->
+
+      </view>
+    </view>
+    <view class='sizezi'>
+      <text> {{ mess.describe }} </text>
+      <!-- <text>联系电话：{{ mess.phone }}</text> -->
+      <button style="width:300rpx;float:left" bindtap='phone' data-phone=" {{ mess.phone }}">联系我</button>
+    </view>
+  </view>
+</van-popup>
+<!-- <modal hidden="{{ huodong }}" title="这里是title" confirm-text="自定义确定按钮" cancel-text="自定义取消按钮" bindcancel="cancel" bindconfirm="confirmto">
+  这是对话框的内容。
+</modal> -->
+<!-- <view class="float {{huodong?'isRuleShow':'isRuleHide'}}" catchtouchmove="preventTouchMove">
+  <view class='floatContent'  bindtap="confirmto">
+  
+  <image style='width:100%;height:100%;border-radius: 20rpx' src='../../img/backg.jpg'></image>
+    <text class="chahao" catchtap='cuohao'> × </text>
+    <image class='sizezi1' src='../../img/sizezi.png'></image>
+    <image class='shaky' src='../../img/dysizezi.gif'></image>
+  </view>
+</view> -->

@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src='../../img/shouquan.png'></image>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+    <button wx:if="{{ checked }}" class='image' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 微信授权登录 </button>
+    <button wx:else class='image' bindtap='shouquan'> 微信授权登录 </button>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+    <view class='flex' style='margin-top:60rpx;' >
+      <van-checkbox value="{{ checked }}" bind:change="onChange">
+      </van-checkbox>
+      <text bindtap='xieyi' style='margin-left:10rpx;font-size:30rpx'>我已同意 <text style='color:#2f82ff' > 捷友联工程信息平台用户协议</text></text>
+    </view>
+  </view>
+
+</view>

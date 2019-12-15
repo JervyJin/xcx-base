@@ -1,0 +1,13 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "即时信息",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "捷友联工程信息平台",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "usingComponents":{
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index",
+    "van-picker": "../../dist/picker/index",
+    "van-rate": "../../dist/rate/index"
+  }
+}

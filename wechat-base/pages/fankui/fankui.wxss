@@ -1,0 +1,86 @@
+/* pages/fankui/fankui.wxss */
+
+.warp {
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  height: 360rpx;
+  background: #f5f8fd;
+  width: 92%;
+  display: block;
+  font-size: 30rpx;
+  padding: 30rpx;
+}
+
+.top {
+  height: 464rpx;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.top > .back {
+  height: 100%;
+  width: 100%;
+}
+
+.top > .last {
+  position: absolute;
+  height: 160rpx;
+  width: 160rpx;
+  z-index: 99;
+  top: 130rpx;
+  left: 298rpx;
+}
+
+.top1 {
+  height: 464rpx;
+  width: 95%;
+  background: #fff;
+  position: relative;
+  padding: 0rpx 20rpx 0 20rpx;
+  margin-top: 30rpx;
+}
+
+.top1 > view {
+  height: 214rpx;
+  width: 214rpx;
+  /* background: pink; */
+  margin: 10rpx;
+  float: left;
+  position: relative;
+}
+
+.top1 > view > image {
+  width: 100%;
+  height: 100%;
+}
+
+.top1 > view .img2 {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button {
+  margin-top: 100rpx;
+  color: #fff;
+  width: 92%;
+  margin-left: 4%;
+  border-radius: 50rpx;
+  height: 90rpx;
+  background: #2e82ff;
+  line-height: 90rpx;
+  font-size: 34rpx;
+}
+
+.botom {
+  background: #fff;
+  width: 100%;
+  height: 180rpx;
+}

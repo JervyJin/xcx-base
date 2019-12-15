@@ -1,0 +1,12 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的评论",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-checkbox": "../../dist/checkbox/index",
+    "van-checkbox-group": "../../dist/checkbox-group/index"
+  }
+}

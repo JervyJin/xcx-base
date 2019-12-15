@@ -1,0 +1,14 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "捷友联",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index",
+    "van-picker": "../../dist/picker/index",
+    "van-checkbox": "../../dist/checkbox/index",
+    "van-checkbox-group": "../../dist/checkbox-group/index"
+  }
+}

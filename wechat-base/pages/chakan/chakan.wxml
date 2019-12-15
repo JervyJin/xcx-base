@@ -1,0 +1,7 @@
+<!--pages/chakan/chakan.wxml-->
+<view wx:for="{{ list }}" class='view' bindtap='tishi' data-id="{{ item.id }}">
+ <view>{{ item.createTime }}</view>
+ <view>{{ item.text }}</view>
+ <view class='dian' wx:if="{{ item.read == 0 }}"></view>
+ <view class='dian1' catchtap='shanchu' data-ids='{{ item.id }}'> 删除 </view>
+</view>

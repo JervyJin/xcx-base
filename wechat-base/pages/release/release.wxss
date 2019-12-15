@@ -1,0 +1,237 @@
+/* pages/release/release.wxss */
+.top {
+  height: 464rpx;
+  width: 100%;
+  position: relative;
+  text-align: center
+}
+.top > .back {
+  height: 100%;
+  width: 100%;
+}
+.top > .last {
+  position: absolute;
+  height: 160rpx;
+  width: 160rpx;
+  z-index: 99;
+  top: 72rpx;
+  left: 298rpx
+} 
+.top1 {
+  height: 464rpx;
+  width: 94%;
+  background: #ffffff;
+  position: relative;
+  padding: 0rpx 20rpx 0 20rpx
+}
+.top1 > view {
+  height: 214rpx;
+  width: 214rpx;
+  /* background: pink; */
+  margin: 10rpx;
+  float: left;
+  position: relative
+}
+.top1 > view > image {
+  width: 100%;
+  height: 100%
+}
+.top1 > view .img2 {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+.warp {
+  padding: 0 30rpx;
+  height: 100%;
+  background: #fff;
+  float: left;
+  width: 92%;
+  position: relative
+}
+.warp > .dis {
+  display: block;
+  font-size: 38rpx;
+  padding-top: 35rpx;
+  padding-bottom: 58rpx ;
+}
+.floa {
+  float: left;
+  margin: 15rpx 100rpx;
+  /* margin: 15rpx; */
+  font-size: 28rpx;
+}
+.div {
+  width: 656rpx;
+  float: left;
+  /* background: pink; */
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  border-radius: 6rpx;
+  padding: 0 18rpx;
+  border: 1px solid #dedddd;
+  color: #797979;
+  background: #f9fbfd;
+  margin-top: 22rpx;
+  position: relative
+}
+.border {
+  height: 24rpx;
+  width: 2rpx;
+  background: #dedddd;
+  display: inline-block;
+  position: absolute;
+  top: 30rpx;
+  left: 150rpx
+}
+.button {
+  width: 500rpx;
+  height: 80rpx;
+  margin: 100rpx;
+  color: #ffffff;
+  background: #2f82ff;
+  border-radius: 38rpx;
+  float: left;
+  margin-left: 15%;
+  line-height: 80rpx;
+}
+.div > input {
+  height: 80rpx;
+  float: right;
+  width: 300rpx
+}
+.div1 {
+  width: 656rpx;
+  float: left;
+  background: pink;
+  height:120rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 120rpx;
+  border-radius: 6rpx;
+  padding: 0 18rpx;
+  border: 1px solid #dedddd;
+  color: #797979;
+  background: #f9fbfd;
+  margin-top: 22rpx;
+  position: relative;
+}
+.textarea {
+  width: 450rpx;
+  height: 80rpx;
+  line-height: 14rpx;
+  padding: 20rpx;
+  font-size: 30rpx
+}
+.textarea1 {
+  width: 450rpx;
+  margin-top: 12rpx;
+  line-height: 34rpx;
+  height: 52rpx;
+  overflow: hidden;
+  font-size: 30rpx
+  ;padding: 20rpx
+}
+.div1 > .right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background: red; */
+  height: 30rpx;
+  line-height: 30rpx
+}
+.border1 {
+  height: 40rpx;
+  width: 2rpx;
+  background: #dedddd;
+  display: inline-block;
+  position: absolute;
+  top: 44rpx;
+  left: 150rpx
+}
+.xuan {
+  position: absolute;
+  width: 100%;
+  top: 90rpx;
+  background: #fff;
+  left: 0;
+  z-index: 999;
+  height: 322rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border: 1px solid #f1f2f7
+}
+.xuan_b {
+  height: 250rpx;
+  overflow-y: auto;
+}
+.xuan_b > text {
+  display: block;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 20rpx;
+}
+.xuan > .xuan_s {
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #ccc
+}
+.cur {
+  background: #2f82ff;
+  color: #fff
+}
+.cur1 {
+  background: #2f82ff;
+  color: #fff
+}
+.leftfan {
+  text-align: right;
+  margin-right: -110rpx;
+  height: 80rpx;
+  float: right;
+  width: 300rpx;
+}
+.xuanze {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 99
+}
+.fabuche {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 99
+}
+.doquyo {
+  width: 480rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align: right
+}
+.dingweixuan {
+  position: absolute;
+  width: 100%;
+  height: 150rpx;
+  right: 0;
+  bottom: -154rpx;
+  z-index: 99;
+}
+.dingweixuan > text {
+  display: block;
+  background: #fff;
+  text-align: center;
+  height: 75rpx;
+  line-height: 1;
+  border-bottom: 1px solid #ccc
+}

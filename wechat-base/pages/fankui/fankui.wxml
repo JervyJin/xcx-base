@@ -1,0 +1,21 @@
+<!--pages/fankui/fankui.wxml-->
+<!-- 反馈问题 -->
+<!-- <text>pages/fankui/fankui.wxml</text> -->
+<view class='warp'>
+  <textarea bindinput='input1' maxlength='100' placeholder='请描述您所遇到的问题'></textarea>
+  <!-- <view class='top' wx:if="{{arr.length == 0}}">
+    <image class='back' src='../../img/back.png'></image>
+    <image bindtap='iamge' class='last' src='../../img/shuangchan.png'></image>
+  </view> -->
+  <view class='top1'>
+    <view wx:for="{{ arr }}" wx:key='index'>
+      <image src='{{ arr[index] }}'></image>
+      <image bindtap='subir' data-index="{{ index }}" class='img2' src='../../img/close.png'></image>
+    </view>
+    <view wx:if="{{arr.length <= 5}}" wx:key='index'>
+      <image class='img1' bindtap='iamge' wx:if="{{arr.length <= 5}}" src='../../img/shangchuan.png'></image>
+
+    </view>
+  </view>
+</view>
+<button bindtap='tijiao'>提交</button>

@@ -1,0 +1,36 @@
+<!--pages/dynamicrelease/dynamicrelease.wxml-->
+<!--pages/release/release.wxml-->
+<!-- 车辆的发布 -->
+<view class='top' wx:if="{{arr.length == 0}}">
+  <image class='back' src='../../img/back.png'></image>
+  <image bindtap='iamge' class='last' src='../../img/shuangchan.png'></image>
+</view>
+<view class='top1' wx:if="{{arr.length > 0}}">
+  <view wx:for="{{ arr }}" wx:key='index'>
+    <image src='{{ arr[index] }}'></image>
+    <image bindtap='subir' data-index="{{ index }}" class='img2' src='../../img/close.png'></image>
+  </view>
+  <view wx:if="{{arr.length <= 5}}" wx:key='index'>
+    <image bindtap='iamge' wx:if="{{arr.length <= 5}}" src='../../img/shangchuan.png'></image>
+  </view>
+</view>
+<!-- 头部的状态结束 -->
+<view class='warp'>
+  <text class='dis'>业务范围</text>
+  <view class='div1'>
+    <text>请描述车辆用途:</text>
+    <textarea placeholder="请发布关于建材、工程车辆及工程机械的相关信息；例如：大量出售沙石，需要联系XXXXXXXXXXX " class='textarea' maxlength='100' bindinput='text'></textarea>
+    <!-- <text class='right'>{{ text.length }}/100字</text> -->
+  </view>
+  <view class='div'>
+    <text>联系电话<text class='border'></text></text>
+    <input type='nubmer' placeholder='请输入联系方式' bindchange="change"></input>
+  </view>
+  <!-- <van-radio-group value="{{ radio }}" bind:change="onChange" class="falt">
+    <van-radio class='floa' name="1" bind:change="onChange(1)">显示手机号</van-radio>
+    <van-radio class='floa' name="2" bind:change="onChange(2)">不显示手机号</van-radio>
+  </van-radio-group> -->
+
+  <!-- <text class='zhuyi'>注：手机号将在发布中展示</text> -->
+  <button class='button' bindtap='fabu'>发布</button>
+</view>

@@ -1,0 +1,236 @@
+<!--pages/xq/xq.wxml-->
+<view id='j_page'>
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{list.car.list}}" wx:key="index">
+      <swiper-item>
+        <image bindtap="click1" data-url='{{ list.car.list }}' class='u-img-slide' src='{{ item }}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+      <!-- <swiper-item bindtap="onClose" style="background:url({{item}})  no-repeat;background-size:100% 100%;width:100%; height:100%;position: absolute;top:0">
+    </swiper-item> -->
+    </block>
+  </swiper>
+  <!-- <view class='zhe' bindtap="click1" data-url='{{ list.car.list }}'></view> -->
+  <!-- 轮播图结束 -->
+  <view class='warp' bindtap='hhh'>
+    <!-- 用户的信息和分享 -->
+    <view class='first'>
+      <view>
+        <image wx:if="{{ list.car.avatarURL }}" src='{{ list.car.avatarURL }}'></image>
+        <image wx:else src='../../img/headert.png'></image>
+        <text style='margin-top:10rpx;'> {{ list.car.nickName }} </text>
+        <view style='font-size:20rpx;float:left;height:40rp;position:absolute;left:148rpx'>
+          <text style='line-height:40rpx;background:#ffc13e;display:inline-block;width:110rpx;height:40rpx;text-align:center;border-radius:30rpx;color:#fff;margin-top:0'>评分 {{ list.average }}</text>
+        </view>
+      </view>
+      <!-- <image bindtap='share' class='img' src='../../img/share.png'></image> -->
+      <!-- <button open-type='share' class='button'>2343243</button> -->
+      <view wx:if="{{ list.car.uuid != uuid }}" class="flexllc" bindtap='jubao' data-uuid="{{ list.car.uuid }}">
+        <image src='../../img/jubao.png'></image>
+        <text>举报</text>
+      </view>
+    </view>
+    <view class='fist1'>
+      <view>
+        <!-- <text>交易类型：<text class='a' wx:if="{{ list.tradesytle == 1 }}">出租</text>
+      <text class='a' wx:else>求租</text> </text> -->
+        <text style='color:#797979'>交易类型：<text class='a' > {{ list.car.tradeType }} </text>
+        </text>
+        <text style='color:#797979'>车辆核载：<text class='a'> {{ list.car.capacity }}</text></text>
+      </view>
+      <view>
+        <text style='color:#797979'>车辆类型：<text class='a'> {{ list.car.carName }} </text></text>
+        <text style='color:#797979'>排放标准：<text class='a'> {{ list.car.standard }} </text></text>
+      </view>
+    </view>
+    <!-- 描述 -->
+    <view class='miaoshu'>
+      <view style='font-size:30rpx'>车辆描述 :</view>
+      <view class='zi'> {{ list.car.describe }} </view>
+    </view>
+    <view class='bottom'>
+      <view class='leet'>
+        <text class='dizhi'>地址：</text>
+        <text> {{ list.car.address }} </text>
+      </view>
+      <view style='margin-top:40rpx;'>发布时间：
+        <text class='colro'> {{ list.car.updatetime }} </text>
+      </view>
+    </view>
+  </view>
+  <view style='text-align:center;width:100%;float:left; padding-bottom: 200rpx;margin-top:20rpx;' wx:if="{{ list.comment.length < 1 }}">
+    暂无评价
+  </view>
+  <view wx:else class='pingjiaa'>
+    <view class='pingjia1'> 评价 </view>
+    <!--  第一条评论  评论内容的开始 -->
+    <view class='pinglnr' wx:for="{{ list.comment }}" bindtap='iody' wx:key="{{ index }}" data-index="{{ index }}">
+      <view class='firstyy'>
+        <image wx:if="{{ item.promulgatorAvatarURL }}" src='{{ item.promulgatorAvatarURL }}'></image>
+        <image wx:else src='../../img/headert.png'></image>
+        <view class='clickname'>
+          <text style=';font-size:30rpx'> {{ item.promulgatorNickName }} </text>
+          <!-- <text class='last'>评分 {{ item.promulgatorEstimate }}</text> -->
+        </view>
+        <!-- 选择回复或者删除 -->
+        <view class='righ' wx:if="{{ item.accepterUserUuid == uuid }}">
+          <!-- wx:if="{{ item.accepterUserUuid == uuid }}" -->
+          <text style='color:#2dca45;font-size:30rpx' bindtap='huifu' data-iod="{{ list }}" data-huifu="{{ item }}" data-index="{{ index }}"> 回复 </text>
+          <!--   -->
+          <!-- <text wx:else style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' bindtap='shanchu' data-shan="{{ item }}"> 删除 </text> -->
+        </view>
+
+        <view class='righ' wx:elif="{{ item.promulgatorUuid == uuid }}">
+          <!-- <text style='color:#2dca45;font-size:30rpx' bindtap='huifu'  data-iod="{{ list }}" data-huifu="{{ item }}" data-index="{{ index }}"> 回复 </text> -->
+          <!-- wx:else  -->
+          <text style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+        </view>
+
+
+        <view class='righ' wx:else>
+          <text style='color:#2dca45;font-size:30rpx' bindtap='huifu' wx:if="{{ false }}" data-iod="{{ list }}" data-huifu="{{ item }}" data-index="{{ index }}"> 回复 </text>
+          <text style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' wx:if="{{ false }}" bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+        </view>
+      </view>
+      <!-- 评论内容 -->
+      <view class='pnryy' style=';font-size:30rpx'> {{ item.commentContent }} </view>
+      <!-- 评论者回复的内容 -->
+      <view wx:for="{{ item.comments }}" wx:key="{{ index }}">
+        <view class='pnryyh' wx:if="{{ item.promulgatorUuid == list.car.uuid }}">
+          <view>
+            <image wx:if="{{ list.car.avatarURL }}" src='{{ list.car.avatarURL }}'></image>
+            <image wx:else src='../../img/headert.png'></image>
+            <text style='height:80rpx;line-height:37rpx;width:430rpx;font-size:24rpx;margin-left:10rpx;font-size:30rpx;line-height:37rpx'> <text style='color:#1c4da8;'>{{  list.car.nickName }} </text>
+            <!-- overflow:hidden; -->
+            <!-- <br/> -->
+            <!-- {{ text }} -->
+            回复:
+            <text style='color:#1c4da8'>{{ item.accepterUserNickName  }}</text>
+            <text style='color:#1c4da8'></text> </text>
+            <!-- 评论者回复的判断 -->
+            <view class='righ' wx:if="{{ item.promulgatorUuid == uuid  }}">
+              <text style='color:#2dca45;font-size:30rpx' bindtap='huifu1' wx:if="{{item.accepterUserUuid == uuid }}" data-iod="{{ list }}" data-huifu="{{ item }}" data-index="{{ index }}"> 回复 </text>
+              <text style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' wx:else bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+            </view>
+
+            <!-- -->
+            <view class='righ' wx:elif="{{ item.accepterUserUuid == uuid }}">
+              <!--   -->
+              <text style='color:#2dca45;font-size:30rpx' wx:if="{{ item.accepterUserUuid == uuid }}" bindtap='huifu1' data-iod="{{ list }}" data-huifu="{{ item }}" data-index="{{ index }}"> 回复 </text>
+              <!-- -->
+              <text wx:else style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+            </view>
+
+
+
+
+
+            <!--  -->
+            <view class='righ' wx:else>
+              <text style='color:#2dca45;font-size:30rpx' wx:if="{{ false }}"> 回复 </text>
+              <text style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' wx:if="{{ false }}"> 删除 </text>
+            </view>
+
+            <!-- <view class='righ' wx:else>
+            <text style='color:#2dca45' bindtap='huifu' wx:if="{{item.promulgatorUuid == uuid }}" data-huifu="{{ list.comment[index] }}"> 回复 </text>
+            <text style='margin-left:30rpx;color:#ef2f2e'wx:if="{{item.promulgatorUuid == uuid }}"> 删除 </text>
+          </view> -->
+          </view>
+          <view class='hiuf' style='margin-top:30rpx;font-size:30rpx'>{{ item.commentContent }}
+          </view>
+        </view>
+        <!-- 回复判断结束 -->
+        <!-- 用户回复发布者 -->
+        <view class='twohui' wx:else>
+          <view style='float:left;width:100%'>
+            <image wx:if="{{ item.promulgatorAvatarURL }}" src='{{ item.promulgatorAvatarURL }}'></image>
+            <image wx:else src='../../img/headert.png'></image>
+            <!-- width:440rpx; -->
+            <text class='yonghu' style='font-size:30rpx;'> <text  style='color:#1c4da8;font-size:30rpx'>{{ item.promulgatorNickName }}</text> {{text}} 回复:
+            <text style='color:#1c4da8;font-size:30rpx'>{{  list.car.nickName }}</text>
+
+            <text style='color:#1c4da8;font-size:30rpx'></text></text>
+            <view class='righ' wx:if="{{item.accepterUserUuid == uuid }}">
+              {{ text }}
+              <!--  -->
+              <!-- list.comment[0].comments[index] -->
+              <text style='color:#2dca45;font-size:30rpx' bindtap='huifu1' data-index="{{ index }}" data-iod="{{ list }}" data-huifu="{{ item }}" wx:if="{{item.promulgatorUuid != uuid }}"> 回复 </text>
+              <text style='margin-left:30rpx;font-size:30rpx;color:#ef2f2e' wx:else bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+            </view>
+            <!--  -->
+            <view class='righ' wx:elif="{{item.promulgatorUuid == uuid }}">
+              <text style='color:#2dca45;font-size:30rpx' data-index="{{ index }}" bindtap='huifu1' data-iod="{{ list }}" data-huifu="{{ item }}" wx:if="{{item.promulgatorUuid != uuid }}"> 回复 </text>
+              <text style='margin-left:30rpx;color:#ef2f2e;font-size:30rpx' wx:else bindtap='shanchu' data-shan="{{ item }}"> 删除 </text>
+            </view>
+            <!--  -->
+            <view class='righ' wx:else>
+              <text style='color:#2dca45;font-size:30rpx' wx:if="{{ false }}"> 回复 </text>
+              <text style='margin-left:30rpx;color:#ef2f2e;font-size:30rpx' wx:if="{{ false }}"> 删除 </text>
+            </view>
+          </view>
+          <!-- 回复内容 -->
+          <view class='huifuneirong' style=';font-size:30rpx'> {{ item.commentContent }} </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 第一级回复的文本框 -->
+  <view class='showtext' wx:if="{{name_focus}}">
+    <input bindblur="blur" bindinput="conmont" maxlength='50' placeholder='请输入评价信息' focus="{{name_focus}}"></input>
+
+    <text bindtap='hhh' style='background:#797979;margin:0 12rpx'>取消</text>
+    <text bindtap='fasogn' style="">发送</text>
+  </view>
+
+  <!-- 二级回复 -->
+  <view class='showtext' wx:if="{{name_focus1}}">
+    <input bindblur="blur" bindinput="conmont" maxlength='50' placeholder='请输入评价信息' focus="{{name_focus}}"></input>
+
+    <text bindtap='hhh' style='background:#797979;margin:0 12rpx'>取消</text>
+    <text bindtap='huifu2' style="">发送</text>
+  </view>
+
+  <view class='bottom1'>
+    <view style='background:#2e82ff' bindtap='ping'>
+      <image class='xian' src='../../img/shou.png'> </image>
+      返回首页</view>
+    <view style='background:#ffa800' bindtap='dianhua' data-phone="{{ list.car.phone }}">
+      <image class='xian' src='../../img/dianhua.png'></image>
+      联系TA</view>
+  </view>
+  <image catchtap='share' class='shaires' src='../../img/share.png'></image>
+  <image catchtap='shoucang' wx:if="{{!list.state}}" class='shaires1' src='../../img/shouang0.png'></image>
+  <image catchtap='shoucang' wx:else class='shaires1' src='../../img/shoucang1.png'></image>
+  <button open-type='share' class='button'>2343243</button>
+  <!-- ----评论的弹框---- -->
+
+  <!-- 评分页面的展示 -->
+  <van-popup catchtouchmove="preventTouchMove" position="bottom" show="{{ pingjia }}" bind:close="onClose">
+    <view class='height'>
+      <!-- 头部 -->
+      <view class='shuop'>
+        <text style='float:left' bindtap='click'>✖</text>
+        <text>评价</text>
+        <text style='position:absolute;right:30rpx;color:#ff9e13' wx:if="{{ list.estimate == 0 }}">{{value}} 分</text>
+      </view>
+      <view style='widht:100%;height:4rpx;background:#d2d2d2'></view>
+      <view class='thoux'>
+        <image wx:if="{{ list.car.avatarURL }}" src='{{ list.car.avatarURL }}'></image>
+        <image wx:else src='../../img/headert.png'></image>
+        <view class='name'> {{ list.car.nickName }} </view>
+        <view style='margin-top:70rpx' wx:if="{{ list.estimate == 0 }}">
+          <van-rate size="{{ 30 }}" value="{{ value }}" bind:change="onChange" />
+        </view>
+        <view class='texty'>
+          <textarea fixed="true" style='font-size:38rpx' bindinput='input' value='{{ text }}' placeholder='请您留下您对信息发布者的评价吧！'></textarea>
+
+          <!-- <view wx:else class='view' bindtap='shuqufa'>
+         {{ text }}
+        </view> -->
+        </view>
+        <view class='tijiao' bindtap='tijao1'>提交</view>
+      </view>
+    </view>
+  </van-popup>
+  <image wx:if="{{ list.car.uuid != uuid }}" bindtap='pingjia' class='pingjia' src='../../img/pingjia.png'></image>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/huodong/huodong.wxml-->
+<view class='view'>
+  <image bindtap='baocun' src='../../img/huodong.jpg'></image>
+  <image bindtap='fabu' class='img' src='../../img/but.gif'></image>
+</view>

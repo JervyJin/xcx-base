@@ -1,0 +1,57 @@
+<!--pages/Mydynamic/Mydynamic.wxml-->
+<!-- 我的发布 -->
+<view class='warp'>
+
+  <van-checkbox-group value="{{ result }}" bind:change="onChange">
+
+    <view class='nr' wx:for="{{list1}}" wx:key="id" bindtap='xiugai' data-viod="{{ item.validOrInvalid }}" data-uuid="{{ item.uuid }}" data-id="{{ item.id }}">
+    <image wx:if="{{ item.validOrInvalid == 1 }}" class='shixoa' src='../../img/shixiao.png'></image>
+      <!-- 用户头像的显示 -->
+      <view class='first'>
+        <!-- {{ item }} -->
+        <image wx:if="{{  item.avatarURL  }}" src='{{ item.avatarURL }}'></image>
+        <image wx:else src='../../img/headert.png'></image>
+      </view>
+      <!-- 发布内容信息 -->
+      <view class='right'>
+        <view catchtap='checkboxChange'>
+          <van-checkbox class='in' name="{{ item.id }}"></van-checkbox>
+        </view>
+        <view class='user'> {{ item.nickName }} </view>
+        <view class='flux'>
+          <!-- <text wx:if="{{ item.tradeType == 1 }}"> 出租 </text>
+        <text wx:else> 求租 </text> -->
+          <text>  {{ item.tradeType }} </text>
+          <text> {{ item.carName }} </text>
+          <text> {{ item.capacity }} {{ item.unit }} </text>
+          <text>{{ item.standard }}</text>
+        </view>
+        <!-- 地区的选择 -->
+        <view class='diqu'>
+          <text> {{ item.address }} </text>
+          <!-- <text class='last'>4800元</text> -->
+        </view>
+        <!-- 内容的简述 -->
+        <view class='sheng'>
+          {{ item.describe }}
+        </view>
+        <!-- 图片的展示 -->
+        <view class='zhanshi'>
+          <view wx:for="{{ item.list }}">
+            <image style='height:100%;width:100%' src='{{ item }}'></image>
+          </view>
+          <view style='background:#2f82ff;color:#fff;border:0' data-id="{{ item.id }}" data-uuid="{{ item.uuid }}" catchtap='newfa1' id='chong' wx:if="{{ item.validOrInvalid == 0 }}">刷新</view>
+          <view data-id="{{ item.id }}" data-uuid="{{ item.uuid }}" catchtap='newfa' id='chong' wx:if="{{ item.validOrInvalid == 1 }}">重新发布</view>
+        </view>
+      </view>
+    </view>
+
+  </van-checkbox-group>
+</view>
+<view class='none' wx:if="{{list1.length == 0}}">
+  <image src='../../img/nonefabu.png'></image>
+  <text>暂时还没有发布任何信息哦 ~</text>
+</view>
+<view class='shanchu' bindtap='shanchu'>
+  <text>删          除</text>
+</view>

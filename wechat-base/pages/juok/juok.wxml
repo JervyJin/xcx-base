@@ -1,0 +1,8 @@
+<!--pages/juok/juok.wxml-->
+<view>
+  <image src='../../img/laidian.png'></image>
+  <view>
+    <button bindtap='fanhui'>返回</button>
+    <view> {{ timer }}s 后返回信息浏览器</view>
+  </view>
+</view>

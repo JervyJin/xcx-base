@@ -1,0 +1,32 @@
+<!--pages/phone/phone.wxml-->
+<view class='phone'>
+  <text class='text'>+86</text>
+  <input placeholder-style='color:rgb(207,207,207)' type='number' bindinput='text1' placeholder='请输入手机号'></input>
+</view>
+<!-- <view wx:else>
+  <text  class='text'>+86</text>
+  <input class='input' value='{{ phone }}' bindinput='text' placeholder='请输入验证码'></input>
+  <text class="button">变更手机号</text>
+</view> -->
+<view>
+  <text>验证码</text>
+  <input type='number' placeholder-style='color:rgb(207,207,207)' class='input' bindinput='text' placeholder='请输入验证码'></input>
+  <text class="button" bindtap='code' wx:if="{{ !code }}">获取验证码</text>
+  <text class="button" wx:else> {{ code }} </text>
+</view>
+<view style='margin-top:30rpx'>
+  <text>推广码</text>
+  <input type='number' placeholder-style='color:rgb(207,207,207)' class='input1' bindinput='text2' placeholder='请输入验证码'></input>
+  
+</view>
+<!-- 邀请码说明是上面的内容 -->
+<!-- <text class="button1" bindtap='ksatar1'>邀请码说明</text> -->
+<!-- <view class='yaoqign'> * 邀请码只可填写一次,二次填写以首次填写为准 </view>
+<view id='sizef' wx:if="{{ ksatar }}">
+  <view>1.邀请人邀请新用户后, 发布十条信息后， 由客服通过微信/支付宝等方式线下发红包10元;</view>
+  <view>2.被邀请人需要填写邀请人对应的邀请码才能有效参与;</view>
+  <view>3.被邀请人也可邀请码邀请新用户, 参与活动;</view>
+  <view>4.本活动长期有效;</view>
+  <view>5.最终解释权归捷之捷公司所有;</view>
+</view> -->
+<button bindtap='bangding'>绑定</button>

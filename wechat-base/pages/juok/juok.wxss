@@ -1,0 +1,28 @@
+/* pages/juok/juok.wxss */
+page {
+  height: 100%;
+}
+view {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative
+}
+view> image {
+  height: 100%;
+  width: 100%
+}
+view > view {
+  position: absolute;
+  top: 50%;
+  height: 250rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #797979
+}
+view > view > button {
+  width: 60%;
+  border-radius: 50rpx;
+  background: #2f82ff;
+  color: #fff
+}

@@ -1,0 +1,104 @@
+<!--logs.wxml-->
+<view class='posi'>
+  <image class='post' src='../../img/sou.png'></image>
+  <input confirm-type='search' bindconfirm="sendMsgTap" class='ipt' bindinput='carSearch' placeholder='请输入关键字及车辆信息'></input>
+  <view class='warp_img' bindtap='cha'>
+    <text style='color:#fff'> 搜索 </text>
+    <!-- <image src='../../img/sou.png'></image> -->
+  </view>
+</view>
+<view class='warpp'>
+  <swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{url}}" wx:for-index="index" wx:key="">
+      <swiper-item>
+        <image src='{{ item }}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <swiper style='background:#fff' bindchange="cardSwiper"  circular="true" autoplay="true" interval="5000" duration="500" indicator-color="#8799a3" indicator-active-color="#0081ff" class="cardSwiper">
+  <block wx:for="{{swiperList}}" wx:key="*this">
+    <swiper-item  class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-view">
+        <image src="{{item.url}}"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper> -->
+</view>
+<image bindtap='top0' class='fanhuitop' src='../../img/fantop.png'></image>
+<!-- <view class='header' bindtap='top0' wx:if="{{ bool }}">
+  点击回到顶部
+</view> -->
+<!-- 搜索框 -->
+<view class='about'>
+  <!-- 搜索框 -->
+
+  <!-- 地区类型的选择 -->
+</view>
+<!-- 发布内容的显示 -->
+<view class='warp'>
+  <view class='nr' wx:for="{{ list }}" wx:key="id">
+    <!-- 用户头像的显示 -->
+    <view class='first'>
+      <image wx:if="{{ item.avatarURL }}" src="{{ item.avatarURL }}"></image>
+      <image wx:else src='../../img/headert.png'></image>
+    </view>
+    <!-- 发布内容信息 -->
+    <view class='right'>
+      <view class='user' style='color:#1c4da8'> {{ item.nickName }} </view>
+      <!-- 地区的选择 -->
+      <!-- <view class='diqu'>
+        <text> 河南省 - 郑州市 - 二七区 </text>
+      </view> -->
+      <!-- 内容的简述 -->
+      <view class='sheng'>
+        <text> {{ item.describe }} </text>
+        <!-- <text wx:if="{{ item.show == 2 }}">联系电话：{{ item.jie }}</text> -->
+        <!-- <text style='color:#1c4da8'>联系电话： {{ item.phone }} </text> -->
+      </view>
+      <!-- 图片的展示 -->
+      <view class='zhanshi'  bindtap='fang' data-url="{{item}}">
+        <view wx:for="{{ item.list }}" wx:key="index" class='zhanshi'>
+          <image src='{{ item }}' ></image>
+        </view>
+      </view>
+      <text style='color:#797979;font-size:22rpx;margin-bottom:30rpx;float:left'> {{ item.updatetime }} </text>
+      <view class='dingwei' bindtap='phone' data-phone=" {{ item.phone }} ">
+      
+        <image src='../../img/phone.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class='bottom'>
+  <image bindtap='fabu' src='../../img/fabugai2.png'></image>
+</view> -->
+<!-- 图片的放大 -->
+<van-popup show="{{ show }}" bind:close="onClose">
+  <!-- <image wx:if="{{ true }}" bindtap="onClose" src="{{ fangurl }}"></image> -->
+  <view style='height: 440rpx;width:644rpx'>
+    <swiper class='swiper' indicator-dots='true' autoplay='false' interval='5000' duration='1000' current='{{index1}}'>
+      <block wx:for="{{fangurl}}" wx:key="index">
+        <swiper-item  bindtap="onClose"  >
+          <image bindtap="onClose" src='{{ item }}' class='ux-img-slide' mode='aspectFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</van-popup>
+<view class='bottom' style="bottom:{{ballBottom}}px;right:{{ballRight}}px;" catchtouchmove="ballMoveEvent">
+  <image style='height:100%;width:100%' bindtap='fabu' src='../../img/fa.png'></image>
+</view>
+<!-- 选择发布的类型 -->
+<van-popup custom-style="background:none" show="{{ fabugai }}" bind:close="onClose">
+  <view class='close_warp'>
+    <view class='close' bindtap='fabu1'>
+      <image src='../../img/fabucar.png'></image>
+      <text>车辆发布</text>
+    </view>
+    <view class='close' bindtap='dyfabu'>
+      <image src='../../img/fabuxx.png'></image>
+      <text>即时发布</text>
+    </view>
+  </view>
+</van-popup>

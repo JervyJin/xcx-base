@@ -1,0 +1,19 @@
+/* pages/xieyi/xieyi.wxss */
+.title {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-family: '宋体'
+}
+.first {
+   text-indent: 80rpx;
+   font-family: '宋体'
+}
+.first1 {
+   font-family: '宋体'
+}
+.title1 {
+  font-family: '宋体';
+  font-weight: 600;
+  margin-top: 10rpx
+}

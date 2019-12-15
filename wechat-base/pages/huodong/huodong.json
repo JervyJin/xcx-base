@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "活动中心",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index",
+    "van-picker": "../../dist/picker/index",
+    "van-rate": "../../dist/rate/index"
+  }
+}

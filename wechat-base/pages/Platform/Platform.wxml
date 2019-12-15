@@ -1,0 +1,12 @@
+<!--pages/Platform/Platform.wxml-->
+<view class='header'>
+  <image src='../../img/back1.png'></image>
+</view>
+<view class='wenzi'>
+  <view class='toux'>
+    <image src='../../img/shouquan.png'></image>
+  </view>
+  <view class='size'>
+   捷友联是河南捷之捷网络技术有限公司开发的一款帮助建筑工程企业提供最便捷的车辆租赁、建材买卖平台，找到你需要的所有工程车辆和建筑材料。主要提供同城车辆租赁，建材销售，精准定位同城闲置车辆，建筑原材料、工程项目结余建材，是最方便的工程车辆和建筑材料掌上管家。
+  </view>
+</view>

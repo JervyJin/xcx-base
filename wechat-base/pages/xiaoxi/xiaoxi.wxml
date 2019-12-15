@@ -1,0 +1,31 @@
+<!--pages/xiaoxi/xiaoxi.wxml-->
+<view class='right' bindtap='xqq' data-biao="{{ xiaoxi.text }}">
+  <view class='flux' wx:if="{{ item.address }}">
+    <!-- <text wx:if="{{ item.tradesytle == 1 }}"> 出租 </text>
+        <text wx:else> 求租 </text> -->
+    <text> {{ item.tradeType }} </text>
+    <text> {{ item.carName }} </text>
+    <text> {{ item.capacity }}{{ item.unit }}</text>
+    <!-- <text wx:if="{{item.standard}}"> {{ item.standard }}</text> -->
+  </view>
+  <!-- 地区的选择 -->
+  <view class='diqu'>
+    <text> {{ item.address }} </text>
+    <!-- <text class='last'>4800元</text> -->
+  </view>
+  <!-- 内容的简述 -->
+  <view class='sheng'>
+    {{ item.describe }}
+  </view>
+  <!-- 图片的展示 -->
+  <view class='zhanshi'>
+    <!-- <view wx:for="{{ item.url }}" class='xqimg'>
+          <image src='{{ item.p_url }}'></image>
+        </view> -->
+    <!-- 测试  wx:if="{{ item.list.length < 4 }}" -->
+    <view class='red' wx:for="{{ item.list }}" wx:key="item" class='xqimg'>
+      <image src='{{ item }}'></image>
+    </view>
+  </view>
+</view>
+<view class='tix'> {{ xiaoxi.content }} </view>

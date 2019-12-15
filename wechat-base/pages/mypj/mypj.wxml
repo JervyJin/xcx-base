@@ -1,0 +1,31 @@
+<!--pages/mypj/mypj.wxml-->
+<!--pages/collection/collection.wxml-->
+<!--pages/Mydynamic/Mydynamic.wxml-->
+<!-- 我的发布 -->
+<view class='warp'>
+  <view class='nr' wx:for="{{list1}}" wx:key="id" bindtap='xiugai' data-viod="{{ item.validOrInvalid }}" data-uuid="{{ item.accepterUserUuid }}" data-id="{{ item.carDataId }}" data-xinid="{{ item.id }}">
+    <image wx:if="{{ item.validOrInvalid == 1 }}" class='shixoa' src='../../img/shixiao.png'></image>
+    <!-- 用户头像的显示 -->
+    <view class='first'>
+
+      <!-- {{ item }} -->
+      <image wx:if="{{  item.avatarURL  }}" src='{{ item.avatarURL }}'></image>
+      <image wx:else src='../../img/headert.png'></image>
+    </view>
+    <!-- 发布内容信息 -->
+    <view class='right'>
+      <view class='vowe' wx:if="{{ item.read == 0 }}"></view>
+      <view class='user'> {{ item.nickName }} </view>
+      <view class="pinnn">
+        <text> {{ item.grade == 0 ? '评论' : '回复'}}您的消息 </text>
+      </view>
+      <view class='user'> {{ item.commentContent }} </view>
+       <text style='float:right;font-size:28rpx'>{{ item.releasetime }}</text>
+    </view>
+
+  </view>
+</view>
+<view class='none' wx:if="{{list1.length == 0}}">
+  <image src='../../img/nonefabu.png'></image>
+  <text>暂时还没有信息评论哦 ~</text>
+</view>

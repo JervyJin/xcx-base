@@ -1,0 +1,12 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的邀请码",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index",
+    "van-picker": "../../dist/picker/index"
+  }
+}

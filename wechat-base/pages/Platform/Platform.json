@@ -1,0 +1,10 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "平台介绍",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#2f82ff",
+  "usingComponents": {
+    "van-area": "../../dist/area/index"
+  }
+}
